@@ -4,7 +4,7 @@
 
 install the python libraryies such as numpy, sklean
 
-run the Car_Final_model.ipynb
+run the Car_Final_model.ipynb in https://github.com/Thimiraakalnaka/Car-Price-predicter-Model-Training/blob/main/Car_Final_model.ipynb
 
 after finished create the model copy the pikle file(RF_my_carmodel.pkl) and paste it in "website/model" file
 NOTICE-above step already done.
