@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Car Price Predictor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Car Price Predictor</div>
+        <form action="/predict" method="POST">
+            <div class="form">
+                <div class="inputfield">
+                    <label for="year">Year</label>
+                    <input class="input" type="text" name="year" min="1990" max="2021"required>
+                </div>
+                <div class="inputfield">
+                    <label for="manufacturer"> manufacturer</label>
+                    <div class = "custom_select">
+                        <select name="manufacturer" id="manufacturer" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="ford">ford</option>
+                            <option value="chevrolet">chevrolet</option>
+                            <option value="toyota">toyota</option>
+                            <option value="honda">honda</option>
+                            <option value="jeep">jeep</option>
+                            <option value="nissan">nissan</option> 
+                            <option value="ram">ram</option>
+                            <option value="gmc">gmc</option>
+                            <option value="bmw">bmw</option>
+                            <option value="dodge">dodge</option>
+                            <option value="mercedes-benz">mercedes-benz</option>
+                            <option value="hyundai">hyundai</option> 
+                            <option value="subaru">subaru</option>
+                            <option value="volkswagen">volkswagen</option>
+                            <option value="kia">kia</option>
+                            <option value="lexus">lexus</option>
+                            <option value="audi">audi</option>
+                            <option value="cadillac">cadillac</option> 
+                            <option value="acura">acura</option>
+                            <option value="buick">buick</option>
+                            <option value="mazda">mazda</option>
+                            <option value="infiniti">infiniti</option>
+                            <option value="lincoln">lincoln</option>
+                            <option value="mitsubishi">mitsubishi</option> 
+                            <option value="volvo">volvo</option>
+                            <option value="mini">mini</option>
+                            <option value="pontiac">pontiac</option>
+                            <option value="jaguar">jaguar</option>
+                            <option value="rover">rover</option>
+                            <option value="porsche">porsche</option> 
+                            <option value="mercury">mercury</option>
+                            <option value="saturn">saturn</option>
+                            <option value="alfa-romeo">alfa-romeo</option> 
+                            <option value="tesla">tesla</option>
+                            <option value="fiat">fiat</option>
+                            <option value="harley-davidson">harley-davidson</option>
+                            <option value="ferrari">ferrari</option>
+                            <option value="datsun">datsun</option>
+                            <option value="aston-martin">aston-martin</option> 
+                            <option value="landrover">land rover</option> 
+                        </select> 
+                    </div>
+                </div>
+               
+                <div class="inputfield">
+                    <label for="condition"> Condition</label>
+                    <div class = "custom_select">
+                        <select name="condition" id="condition" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="good">Good</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="likenew">Likenew</option>
+                            <option value="fair">Fair</option>
+                            <option value="new">New</option>
+                            <option value="salvage">Salvage</option> 
+                        </select> 
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="cylinders">Cylinders</label>           
+                    <div class = "custom_select">
+                        <select name="cylinders" id="cylinders" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="3cylinders">3 Cylinders</option>
+                            <option value="4cylinders">4 Cylinders</option>
+                            <option value="5cylinders">5 Cylinders</option>
+                            <option value="6cylinders">6 Cylinders</option>
+                            <option value="8cylinders">8 Cylinders</option>
+                            <option value="10cylinders">10 Cylinders</option> 
+                            <option value="12cylinders">10 Cylinders</option>
+                            <option value="other">Other</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="fuel">Fuel</label>           
+                    <div class = "custom_select">
+                        <select name="fuel" id="fuel" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="gas">Gas</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="electric">Electric</option>
+                            <option value="other">Other</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="odometer">Odometer</label>
+                    <input class="input" type="number" name="odometer" required>
+                </div>
+                <div class="inputfield">
+                    <label for="transmission">Transmission</label>   
+                    <div class = "custom_select">
+                        <select name="transmission" id="transmission" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="automatic">Automatic</option>
+                            <option value="manual">Manual</option>
+                            <option value="other">Other</option>
+                        </select>  
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="drive">Drive</label>   
+                    <div class = "custom_select">
+                        <select name="drive" id="drive" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="4wd">4Wd</option>
+                            <option value="fwd">Fwd</option>
+                            <option value="rwd">Rwdr</option>
+                        </select>  
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="type">Type</label>   
+                    <div class = "custom_select">
+                        <select name="type" id="type" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="pickup">Pickup</option>
+                            <option value="truck">Truck</option>
+                            <option value="coupe">Coupe</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="wagon">Wagon</option>
+                            <option value="van">Van</option>
+                            <option value="convertible">Convertible</option>
+                            <option value="mini-van">Mini-van</option>
+                            <option value="offroad">Offroad</option>
+                            <option value="bus">Bus</option>
+                            <option value="other">other</option>
+                        </select>  
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="paintcolor">Paintcolor</label>   
+                    <div class = "custom_select">
+                        <select name="paintcolor" id="paintcolor" required>
+                            <option value="" selected hidden>Select</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="silver">Silver</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="grey">Grey</option>
+                            <option value="green">Green</option>
+                            <option value="custom">Custom</option>
+                            <option value="brown">Brown</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="orange">Orange</option>
+                            <option value="purple">Purple</option>
+                        </select>  
+                    </div>
+                </div>
+    
+                <div class="inputfield">
+                    <input class="btn" type="submit" value="Precict Price">
+                </div>
+            </div>
+        </form>
+
+        <div class="result">
+            <h1>Prediction Result</h1>
+    <p>The predicted Car Price : $ {{ pred_value }}</p>
+        </div>
+    </div>
+</body>
+</html>
